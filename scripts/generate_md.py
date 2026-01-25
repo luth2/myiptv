@@ -3,41 +3,58 @@ import requests
 import re
 from pathlib import Path
 
-BASE_URL = "https://raw.githubusercontent.com/iptv-org/iptv/master/streams"
+BASE_URL = "https://raw.githubusercontent.com/iptv-org/iptv/HEAD/streams"
 
-def parse_m3u(m3u_text):
+def clean_name(name: str) -> str:
+    name = re.sub(r"\(.*?\)", "", name)
+    name = re.sub(r"\[.*?\]", "", name)
+    return name.strip()
+
+def parse_m3u(text: str):
     entries = []
-    lines = m3u_text.splitlines()
+    lines = text.splitlines()
 
     for i in range(len(lines)):
         if lines[i].startswith("#EXTINF"):
-            name = re.search(r",(.+)$", lines[i])
-            if name:
-                entries.append({
-                    "name": name.group(1).strip(),
-                    "url": lines[i + 1].strip()
-                })
+            raw_name = re.search(r",(.+)$", lines[i]).group(1).strip()
+            entries.append({
+                "raw_name": raw_name,
+                "name": clean_name(raw_name),
+                "extinf": lines[i],
+                "url": lines[i + 1].strip()
+            })
     return entries
 
 
 config = yaml.safe_load(Path("channels.yml").read_text())
-output = ["# 📺 Meine IPTV Sender\n"]
+
+md = ["# 📺 Meine IPTV Sender\n"]
+m3u = ["#EXTM3U\n"]
 
 for source in config["sources"]:
     country = source["country"]
     wanted = source["channels"]
 
     print(f"Lade {country}…")
-    m3u = requests.get(f"{BASE_URL}/{country}.m3u").text
-    channels = parse_m3u(m3u)
+    resp = requests.get(f"{BASE_URL}/{country}.m3u")
+    resp.raise_for_status()
 
-    output.append(f"\n## {country}\n")
+    channels = parse_m3u(resp.text)
+
+    md.append(f"\n## {country}\n")
 
     for w in wanted:
         match = next((c for c in channels if c["name"] == w), None)
-        if match:
-            output.append(f"- **{match['name']}**  \n  `{match['url']}`")
-        else:
-            output.append(f"- ⚠️ {w} *(nicht gefunden)*")
 
-Path("channels.md").write_text("\n".join(output))
+        if match:
+            # Markdown
+            md.append(f"- **{match['name']}**  \n  `{match['url']}`")
+
+            # M3U
+            m3u.append(match["extinf"])
+            m3u.append(match["url"])
+        else:
+            md.append(f"- ⚠️ {w} *(nicht gefunden)*")
+
+Path("channels.md").write_text("\n".join(md))
+Path("channels.m3u").write_text("\n".join(m3u))
