@@ -1,18 +1,39 @@
 sources:
   - country: DE
     channels:
-      - Das Erste
-      - ZDF
-      - arte
-      - 3sat
+      - 3sat HD (1080p)
+      - arte HD
+      - BR Fernsehen Sud (1080p)
+      - Comedy Central HD (1080p)
+      - Das Erste (1080p)
+      - Disney Channel (576p)
+      - kabel eins (576p)
+      - KiKA (1080p) [Geo-blocked]
+      - MDR Fernsehen Sachsen (1080p) [Geo-blocked]
+      - n-tv (1080p)
+      - NDR Fernsehen
+      - Nick Germany (1080p) [Geo-blocked]
+      - Nick/Comedy Central +1 HD (1080p)
+      - Nickelodeon Deutschland [Geo-blocked]
+      - Nitro HD (1080p)
       - phoenix
+      - ProSieben (1080p)
+      - RTL HD
+      - RTL Super
+      - RTL Zwei HD (1080p)
+      - sixx
+      - Super RTL HD (720p)
+      - Tagesschau 24 (720p)
+      - VOX (576p) [Geo-blocked]
+      - WDR Fernsehen (1080p)
+      - WELT (1080p)
+      - ZDF HD (720p)
+      - ZDFneo HD (720p)
+      - ProSieben Maxx (576p)
+      - kabel eins Doku (576p)
+      - SAT.1 Gold (576p)
 
-  - country: AT
+  - country: AU
     channels:
-      - ORF 1
-      - ORF 2
-
-  - country: CH
-    channels:
-      - SRF 1
-      - SRF 2
+      - Channel 7 (720p) [Geo-blocked]
+      - Channel 9 Sydney (720p) [Geo-blocked]
