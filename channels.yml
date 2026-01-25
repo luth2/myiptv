@@ -1,5 +1,5 @@
 sources:
-  - country: DE
+  - country: de
     channels:
       - 3sat HD (1080p)
       - arte HD
@@ -33,7 +33,8 @@ sources:
       - kabel eins Doku (576p)
       - SAT.1 Gold (576p)
 
-  - country: AU
+  - country: au
     channels:
       - Channel 7 (720p) [Geo-blocked]
       - Channel 9 Sydney (720p) [Geo-blocked]
+
