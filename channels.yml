@@ -1,0 +1,18 @@
+sources:
+  - country: DE
+    channels:
+      - Das Erste
+      - ZDF
+      - arte
+      - 3sat
+      - phoenix
+
+  - country: AT
+    channels:
+      - ORF 1
+      - ORF 2
+
+  - country: CH
+    channels:
+      - SRF 1
+      - SRF 2
