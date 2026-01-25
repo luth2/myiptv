@@ -3,7 +3,7 @@ import requests
 import re
 from pathlib import Path
 
-BASE_URL = "https://raw.githubusercontent.com/iptv-org/iptv/HEAD/streams"
+BASE_URL = "https://raw.githubusercontent.com/iptv-org/iptv/HEAD/countries"
 
 def clean_name(name: str) -> str:
     name = re.sub(r"\(.*?\)", "", name)
