@@ -1,27 +1,33 @@
 name: Update IPTV Channels
 
 on:
+  workflow_dispatch:   # 👈 manueller Button
   schedule:
     - cron: "0 3 * * *"
-  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
-      - run: pip install requests pyyaml
+      - name: Install deps
+        run: pip install requests pyyaml
 
-      - run: python scripts/generate_md.py
+      - name: Generate playlists
+        run: python scripts/generate_channels.py
 
-      - run: |
+      - name: Commit changes
+        run: |
           git config user.name "iptv-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add channels.md
+          git add channels.md channels.m3u
           git commit -m "Update IPTV channels" || exit 0
           git push
