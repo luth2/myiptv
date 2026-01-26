@@ -7,7 +7,7 @@ sources:
       - Comedy Central HD (1080p)
       - Das Erste (1080p)
       - Disney Channel (576p)
-      - kabel eins (576p)
+      - kabel eins
       - KiKA (1080p) [Geo-blocked]
       - MDR Fernsehen Sachsen (1080p) [Geo-blocked]
       - n-tv (1080p)
@@ -37,4 +37,5 @@ sources:
     channels:
       - Channel 7 (720p) [Geo-blocked]
       - Channel 9 Sydney (720p) [Geo-blocked]
+
 
