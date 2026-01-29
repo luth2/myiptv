@@ -16,7 +16,7 @@
 - **Disney Channel**  
   `https://viamotionhsi.netplus.ch/live/eds/disneychannelde/browser-HLS8/disneychannelde.m3u8`
 - **kabel eins**  
-  `https://strm.hdtvizlecanli.com/live/kabel1.m3u8`
+  `https://dash4.antik.sk/live/test_kabel_eins_tizen/playlist.m3u8`
 - **KiKA**  
   `https://kikageohls.akamaized.net/hls/live/2022693/livetvkika_de/master.m3u8`
 - **MDR Fernsehen Sachsen**  
