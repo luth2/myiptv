@@ -6,7 +6,7 @@
 - **3sat HD**  
   `https://viamotionhsi.netplus.ch/live/eds/3sathd/browser-HLS8/3sathd.m3u8`
 - **arte**  
-  `https://dash4.antik.sk/live/test_arte_avc_25p/playlist.m3u8`
+  `http://c3921155.edmonst.net/iptv/65C7UBRRW8GHQVYPH2MQT3SA/15171/index.m3u8`
 - **BR Fernsehen Sud**  
   `https://viamotionhsi.netplus.ch/live/eds/brhdsud/browser-HLS8/brhdsud.m3u8`
 - **Comedy Central HD**  
