@@ -2,12 +2,8 @@
 
 #EXTINF:-1 tvg-id="arte.de@SD",arte (1080p)
 http://c3921155.edmonst.net/iptv/65C7UBRRW8GHQVYPH2MQT3SA/15171/index.m3u8
-#EXTINF:-1 tvg-id="BRFernsehen.de@Sud",BR Fernsehen Sud
-https://dash2.antik.sk/live/test_br_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="DasErste.de@SD",Das Erste (1080p)
 https://derste247liveint.akamaized.net/hls/live/662735/daserste_int/master.m3u8
-#EXTINF:-1 tvg-id="kabeleins.de@SD",kabel eins
-https://dash4.antik.sk/live/test_kabel_eins_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="KiKA.de@SD",KiKA (1080p) [Geo-blocked]
 https://kikageohls.akamaized.net/hls/live/2022693/livetvkika_de/master.m3u8
 #EXTINF:-1 tvg-id="MDRFernsehen.de@Sachsen",MDR Fernsehen Sachsen (1080p) [Geo-blocked]
@@ -16,10 +12,8 @@ https://mdrtvsnhls.akamaized.net/hls/live/2016928/mdrtvsn/index.m3u8
 https://0d26a00dfbb1.airspace-cdn.cbsivideo.com/nick1999/master/nick1999.m3u8
 #EXTINF:-1 tvg-id="Nickelodeon.de@SD",Nickelodeon Deutschland [Geo-blocked]
 https://unilivemtveu-lh.akamaihd.net/i/nickde_1@448749/master.m3u8
-#EXTINF:-1 tvg-id="ProSieben.de@SD",ProSieben (1080p)
-https://dash4.antik.sk/live/test_pro_sieben_tizen/playlist.m3u8
-#EXTINF:-1 tvg-id="sixx.de@SD",sixx
-https://dash4.antik.sk/live/test_sixx_tizen/playlist.m3u8
+#EXTINF:-1 tvg-id="ProSieben.de@SD",ProSieben (576p)
+#EXTVLCOPT:http-referrer=http://85.187.13.40:18000/
 #EXTINF:-1 tvg-id="RTLSuper.de@HD",Super RTL HD (720p)
 #EXTVLCOPT:http-referrer=https://www.2ix2.com/super-rtl-live/
 #EXTINF:-1 tvg-id="tagesschau24.de@SD",Tagesschau 24 (720p)
@@ -32,8 +26,6 @@ https://s6.hopslan.com/n24X/index.m3u8
 http://79.232.88.203:9981/stream/channelid/1038721938
 #EXTINF:-1 tvg-id="kabeleinsDoku.de@SD",kabel eins Doku (576p)
 http://79.232.88.203:9981/stream/channelid/81078517
-#EXTINF:-1 tvg-id="SAT1Gold.de@SD",SAT.1 Gold (576p)
-https://dash4.antik.sk/live/test_sat_eins_gold_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="Channel7.au@Sydney",Channel 7 (720p) [Geo-blocked]
 https://npc.cdn.7livecloud.io/hls/live/SYD1/master.m3u8
 #EXTINF:-1 tvg-id="Channel9.au@Sydney",Channel 9 Sydney (720p) [Geo-blocked]
